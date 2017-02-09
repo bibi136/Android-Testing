@@ -16,6 +16,13 @@
 
 package com.example.android.testing.notes.notedetail;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.support.test.espresso.Espresso;
+import android.support.test.filters.LargeTest;
+import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
 import com.example.android.testing.notes.R;
 import com.example.android.testing.notes.data.FakeNotesServiceApiImpl;
 import com.example.android.testing.notes.data.Note;
@@ -25,13 +32,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.support.test.espresso.Espresso;
-import android.support.test.filters.LargeTest;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -88,26 +88,25 @@ public class NoteDetailScreenTest {
      */
     @Before
     public void intentWithStubbedNoteId() {
-//        // Add a note stub to the fake service api layer.
-//        FakeNotesServiceApiImpl.addNotes(NOTE);
-//
-//        // Lazily start the Activity from the ActivityTestRule this time to inject the start Intent
-//        Intent startIntent = new Intent();
-//        startIntent.putExtra(NoteDetailActivity.EXTRA_NOTE_ID, NOTE.getId());
-//        mNoteDetailActivityTestRule.launchActivity(startIntent);
-//
-//        registerIdlingResource();
+        // Add a note stub to the fake service api layer.
+        FakeNotesServiceApiImpl.addNotes(NOTE);
+
+        // Lazily start the Activity from the ActivityTestRule this time to inject the start Intent
+        Intent startIntent = new Intent();
+        startIntent.putExtra(NoteDetailActivity.EXTRA_NOTE_ID, NOTE.getId());
+        mNoteDetailActivityTestRule.launchActivity(startIntent);
+
+        registerIdlingResource();
     }
 
     @Test
     public void noteDetails_DisplayedInUi() throws Exception {
-        fail("Implement step 7");
-//        // Check that the note title, description and image are displayed
-//        onView(withId(R.id.note_detail_title)).check(matches(withText(NOTE_TITLE)));
-//        onView(withId(R.id.note_detail_description)).check(matches(withText(NOTE_DESCRIPTION)));
-//        onView(withId(R.id.note_detail_image)).check(matches(allOf(
-//                hasDrawable(),
-//                isDisplayed())));
+        // Check that the note title, description and image are displayed
+        onView(withId(R.id.note_detail_title)).check(matches(withText(NOTE_TITLE)));
+        onView(withId(R.id.note_detail_description)).check(matches(withText(NOTE_DESCRIPTION)));
+        onView(withId(R.id.note_detail_image)).check(matches(allOf(
+                hasDrawable(),
+                isDisplayed())));
     }
 
     /**
