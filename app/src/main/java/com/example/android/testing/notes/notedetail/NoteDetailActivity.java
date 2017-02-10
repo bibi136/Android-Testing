@@ -28,6 +28,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 /**
  * Displays note details screen.
@@ -48,6 +49,8 @@ public class NoteDetailActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowHomeEnabled(true);
+
+        Log.d("hung", "onCreate: ");
 
         // Get the requested note id
         String noteId = getIntent().getStringExtra(EXTRA_NOTE_ID);
