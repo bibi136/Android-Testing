@@ -50,8 +50,6 @@ public class NoteDetailActivity extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowHomeEnabled(true);
 
-        Log.d("hung", "onCreate: ");
-
         // Get the requested note id
         String noteId = getIntent().getStringExtra(EXTRA_NOTE_ID);
 
