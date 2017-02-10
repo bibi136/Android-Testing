@@ -36,4 +36,3 @@ before_script:
 
 script:
   - ./gradlew test
-  - ./gradlew connectedAndroidTest
