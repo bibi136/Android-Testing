@@ -1,6 +1,6 @@
 # Android Testing Codelab
 
-[![Build Status](https://travis-ci.org/bibi136/Android-Testing.svg?branch=master)](https://travis-ci.org/bibi136/Android-Testing)
+[![Build Status](https://travis-ci.org/bibi136/Android-Testing.svg?branch=final)](https://travis-ci.org/bibi136/Android-Testing)
 
 This folder contains the source code for the Android testing codelab. It gives an introduction into testing on Android, including unit tests and UI tests. 
 
